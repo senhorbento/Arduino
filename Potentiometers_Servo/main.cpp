@@ -7,7 +7,7 @@ Servo servoMotorObj2;
 const int potenciometroPin=  0;
 const int potenciometroPin2= 1;  
  
-const int servoMotorPin=  3;
+const int servoMotorPin=  5;
 const int servoMotorPin2= 4;  
  
 int valPotenciometro; 
