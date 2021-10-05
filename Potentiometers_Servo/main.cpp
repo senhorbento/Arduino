@@ -20,13 +20,13 @@ void setup() {
   
 void loop() { 
   valPotenciometro = analogRead(potenciometroPin); 
-  valPotenciometro2 = analogRead(potenciometroPin);
+  valPotenciometro2 = analogRead(potenciometroPin2);
 
   valPotenciometro = map(valPotenciometro, 0, 1023, 0, 180); 
   valPotenciometro2 = map(valPotenciometro2, 0, 1023, 0, 180); 
 
   servoMotorObj.write(valPotenciometro);
-  servoMotorObj2.write(valPotenciometro); 
+  servoMotorObj2.write(valPotenciometro2); 
 
   delay(10);   
 }
