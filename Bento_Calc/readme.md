@@ -1,4 +1,4 @@
 # A simple calculator for arduino
 Um simples projeto de uma calculadora, com algumas funcionalidades extras, utilizando arduino.
 #
-A simple project with arduino in which you can do a calculator with some extra features.
+*(EN) A simple project with arduino in which you can do a calculator with some extra features.*
