@@ -1,2 +1,4 @@
 # Arduino
-Alguns simples programas para Arduino
+
+Alguns simples projetos para Arduino
+(EN) *Some simple projects to Arduino*
