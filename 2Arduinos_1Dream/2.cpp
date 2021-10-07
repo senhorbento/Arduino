@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #define PinR  7
 #define PinG  6 
 #define PinB  5         
@@ -10,12 +8,14 @@ void estado(int v){
       digitalWrite(PinR, 0);
       digitalWrite(PinG, 0);
       digitalWrite(PinB, 0);
+      delay(1000);
       Serial.write('0');
   }
   else{
       digitalWrite(PinR, 1);
       digitalWrite(PinG, 1);
       digitalWrite(PinB, 1);
+      delay(1000);
       Serial.write('1');
   }
 }
@@ -33,13 +33,11 @@ void loop() {
   
   if(Serial.available()){
     recebido = Serial.read();
-        
+            
     if(recebido == '1')
       estado(1);
 
     else if (recebido == '0')
       estado(0);
   }
-
-   delay(1000);
 }
