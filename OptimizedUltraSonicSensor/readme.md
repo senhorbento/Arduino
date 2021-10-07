@@ -3,4 +3,4 @@ Um simples projeto com arduino no qual você pode conectar 3+ sensores ultra son
 ### Você pode ver como montar o circuito [aqui](https://www.tinkercad.com/things/j05xzDXFFLg)
 #
 *(EN) A simple project with arduino in which you can connect 3+ sensors using just 4+ pins.*  
-### *You can view how make the same circuit as the mine [here](https://www.tinkercad.com/things/j05xzDXFFLg)*
+### *You can view how make the same circuit [here](https://www.tinkercad.com/things/j05xzDXFFLg)*
