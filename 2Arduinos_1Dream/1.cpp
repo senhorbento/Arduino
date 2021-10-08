@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #define PinR  7
 #define PinG  6 
 #define PinB  5            
@@ -38,8 +36,6 @@ void loop() {
     
     else if (recebido == '0')
       estado(0);
-    
+    delay(1000);
   }
-  
-  delay(1000);
 }
