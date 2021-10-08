@@ -2,7 +2,6 @@
 #define PinG  6 
 #define PinB  5         
 
-
 void estado(int v){
   if(v == 0){
       digitalWrite(PinR, 0);
