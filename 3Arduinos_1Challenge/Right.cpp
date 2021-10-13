@@ -1,6 +1,6 @@
 #define PinR  7
 #define PinG  6 
-#define PinB  5         
+#define PinB  5            
 
 void estado(int v){
   if(v == 0){
@@ -18,10 +18,10 @@ void estado(int v){
 }
 
 void setup() { 
-  Serial.begin(19200);
+  Serial.begin(9600);
   pinMode(PinR, OUTPUT);
   pinMode(PinG, OUTPUT);
-  pinMode(PinB, OUTPUT); 
+  pinMode(PinB, OUTPUT);
 } 
   
 void loop() {
@@ -29,10 +29,10 @@ void loop() {
   
   if(Serial.available()){
     recebido = Serial.read();
-            
+    
     if(recebido == '1')
       estado(1);
-
+    
     else if (recebido == '0')
       estado(0);
   }
