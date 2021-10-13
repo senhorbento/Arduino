@@ -18,7 +18,7 @@ void estado(int v){
 }
 
 void setup() { 
-  Serial.begin(9600);
+  Serial.begin(4800);
   pinMode(PinR, OUTPUT);
   pinMode(PinG, OUTPUT);
   pinMode(PinB, OUTPUT);
