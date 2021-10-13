@@ -76,9 +76,9 @@ void loop() {
     delay(tmp);   
      
     if(recebido == '1')
-      estadoE(1);
+      estadoR(0);
     else if (recebido == '0')
-      estadoE(0);
+      estadoR(1);
   }
   else if(Serial3.available()){
     recebido = Serial3.read();
@@ -86,9 +86,9 @@ void loop() {
     delay(tmp);    
 
     if(recebido == '1')
-      estadoR(1);
+      estadoE(1);
     else if (recebido == '0')
-      estadoR(0);
+      estadoE(0);
     espera --;
   }
 }
