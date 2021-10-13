@@ -37,16 +37,16 @@ void estadoE(int v){
 
 void estadoR(int v){
   if(v == 0){
-      digitalWrite(PinRl, 1);
-      digitalWrite(PinGl, 0);
+      digitalWrite(PinRr, 1);
+      digitalWrite(PinGr, 0);
       delay(tmp); 
       Serial.write('0');
       apagar();
       delay(tmp);
   }
   else{
-      digitalWrite(PinRl, 0);
-      digitalWrite(PinGl, 1);
+      digitalWrite(PinRr, 0);
+      digitalWrite(PinGr, 1);
       delay(tmp);
       Serial.write('1');
       apagar();
@@ -60,6 +60,9 @@ void setup() {
   pinMode(PinRl, OUTPUT);
   pinMode(PinGl, OUTPUT);
   pinMode(PinBl, OUTPUT);
+  pinMode(PinRr, OUTPUT);
+  pinMode(PinGr, OUTPUT);
+  pinMode(PinBr, OUTPUT);
   apagar();
   estado(0);  
 } 
