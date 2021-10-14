@@ -16,38 +16,38 @@ void apagar(){
   digitalWrite(PinBr, 0);
 }
 
-void estadoE(int v){
+void estadoR(int v){
   if(v == 0){
-      digitalWrite(PinRl, 1);
-      digitalWrite(PinGl, 0);
+      digitalWrite(PinRr, 1);
+      digitalWrite(PinGr, 0);
       delay(tmp); 
       Serial3.write('0');
       apagar();
       delay(tmp);
   }
   else{
-      digitalWrite(PinRl, 0);
-      digitalWrite(PinGl, 1);
-      delay(tmp);
+      digitalWrite(PinRr, 0);
+      digitalWrite(PinGr, 1);
+      delay(tmp); 
       Serial3.write('1');
       apagar();
       delay(tmp);
   }
 }
 
-void estadoR(int v){
+void estadoL(int v){
   if(v == 0){
-      digitalWrite(PinRr, 1);
-      digitalWrite(PinGr, 0);
+      digitalWrite(PinRl, 1);
+      digitalWrite(PinGl, 0);
       delay(tmp); 
       Serial.write('0');
       apagar();
       delay(tmp);
   }
   else{
-      digitalWrite(PinRr, 0);
-      digitalWrite(PinGr, 1);
-      delay(tmp);
+      digitalWrite(PinRl, 0);
+      digitalWrite(PinGl, 1);
+      delay(tmp); 
       Serial.write('1');
       apagar();
       delay(tmp);
@@ -63,32 +63,30 @@ void setup() {
   pinMode(PinRr, OUTPUT);
   pinMode(PinGr, OUTPUT);
   pinMode(PinBr, OUTPUT);
-  apagar();
-  estado(0);  
+  apagar(); 
 } 
-  
+
 void loop() {
   char recebido;
-  
+
+  if(Serial3.available()){
+    recebido = Serial3.read();
+    digitalWrite(PinBr, 1);
+    delay(tmp);   
+
+    if(recebido == '1')
+      estadoL(0);
+    else if (recebido == '0')
+      estadoL(1);
+  }
   if(Serial.available()){
     recebido = Serial.read();
     digitalWrite(PinBl, 1);
     delay(tmp);   
-     
-    if(recebido == '1')
-      estadoR(0);
-    else if (recebido == '0')
-      estadoR(1);
-  }
-  else if(Serial3.available()){
-    recebido = Serial3.read();
-    digitalWrite(PinBr, 1);
-    delay(tmp);    
 
     if(recebido == '1')
-      estadoE(1);
+      estadoR(1);
     else if (recebido == '0')
-      estadoE(0);
-    espera --;
+      estadoR(0);
   }
-}
+} 
