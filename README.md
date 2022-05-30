@@ -1,5 +1,3 @@
 # Arduino
 
-Alguns simples projetos para Arduino  
-#
-(EN) *Some simple projects to Arduino*
+Um pouco dos pequenos projetos que já fiz utilizando um Arduino.
